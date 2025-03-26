@@ -1,0 +1,107 @@
+--CREATE DATABASE SISDB;
+
+--Tables creation -> Students, Courses, Enrollments, Teacher, Payments.
+--Data insertion
+
+--Students table and data insertion.
+/*CREATE TABLE Students (
+    student_id INT PRIMARY KEY,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    date_of_birth DATE,
+    email VARCHAR(100),
+    phone_number VARCHAR(15)
+);*/
+
+/*INSERT INTO Students (student_id, first_name, last_name, date_of_birth, email, phone_number) VALUES
+(1, 'Alice', 'Smith', '1996-01-15', 'alice.smith@example.com', '1234567890'),
+(2, 'Bob', 'Johnson', '1995-02-20', 'bob.johnson@example.com', '1234567891'),
+(3, 'Charlie', 'Williams', '1994-03-25', 'charlie.williams@example.com', '1234567892'),
+(4, 'David', 'Brown', '1993-04-30', 'david.brown@example.com', '1234567893'),
+(5, 'Eva', 'Jones', '1992-05-05', 'eva.jones@example.com', '1234567894'),
+(6, 'Frank', 'Garcia', '1991-06-10', 'frank.garcia@example.com', '1234567895'),
+(7, 'Grace', 'Martinez', '1990-07-15', 'grace.martinez@example.com', '1234567896'),
+(8, 'Hank', 'Davis', '1989-08-20', 'hank.davis@example.com', '1234567897'),
+(9, 'Ivy', 'Rodriguez', '1988-09-25', 'ivy.rodriguez@example.com', '1234567898'),
+(10, 'Jack', 'Wilson', '1987-10-30', 'jack.wilson@example.com', '1234567899');*/
+
+--Teacher table creation and data insertion
+/*CREATE TABLE Teacher (
+    teacher_id INT PRIMARY KEY,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    email VARCHAR(100)
+);*/
+
+/*INSERT INTO Teacher (teacher_id, first_name, last_name, email) VALUES
+(1, 'Sarah', 'Smith', 'sarah.smith@example.com'),
+(2, 'Michael', 'Johnson', 'michael.johnson@example.com'),
+(3, 'Emily', 'Davis', 'emily.davis@example.com'),
+(4, 'James', 'Brown', 'james.brown@example.com'),
+(5, 'Linda', 'Garcia', 'linda.garcia@example.com');*/
+
+--Courses table creation and data insertion
+/*CREATE TABLE Coursess (
+    course_id INT PRIMARY KEY,
+    course_name VARCHAR(100),
+    credits INT,
+    teacher_id INT,
+    FOREIGN KEY (teacher_id) REFERENCES Teacher(teacher_id)
+);*/
+
+/*INSERT INTO Coursess (course_id, course_name, credits, teacher_id) VALUES
+(1, 'Introduction to Programming', 3, 1),
+(2, 'Mathematics 101', 4, 2),
+(3, 'Data Structures', 3, 1),
+(4, 'Database Management', 4, 3),
+(5, 'Web Development', 3, 4),
+(6, 'Operating Systems', 4, 2),
+(7, 'Computer Networks', 3, 5),
+(8, 'Software Engineering', 4, 3),
+(9, 'Machine Learning', 3, 5),
+(10, 'AI Fundamentals', 4, 5);*/
+
+--Enrollments table creation and data insertion
+/*CREATE TABLE Enrollments (
+    enrollment_id INT PRIMARY KEY,
+    student_id INT,
+    course_id INT,
+    enrollment_date DATE,
+    FOREIGN KEY (student_id) REFERENCES Students(student_id),
+    FOREIGN KEY (course_id) REFERENCES Coursess(course_id)
+);*/
+
+/*INSERT INTO Enrollments (enrollment_id, student_id, course_id, enrollment_date) VALUES
+(1, 1, 1, '2023-01-10'),
+(2, 1, 2, '2023-01-15'),
+(3, 2, 1, '2023-01-20'),
+(4, 3, 3, '2023-01-25'),
+(5, 4, 4, '2023-01-30'),
+(6, 5, 5, '2023-02-01'),
+(7, 6, 6, '2023-02-05'),
+(8, 7, 7, '2023-02-10'),
+(9, 8, 8, '2023-02-15'),
+(10, 9, 9, '2023-02-20');*/
+
+--Payments table creation and data insertion
+/*CREATE TABLE Payments (
+    payment_id INT PRIMARY KEY,
+    student_id INT,
+    amount DECIMAL(10, 2),
+    payment_date DATE,
+    FOREIGN KEY (student_id) REFERENCES Students(student_id)
+);*/
+
+/*INSERT INTO Payments (payment_id, student_id, amount, payment_date) VALUES
+(1, 1, 500.00, '2023-02-01'),
+(2, 2, 300.00, '2023-02-05'),
+(3, 3, 450.00, '2023-02-10'),
+(4, 4, 600.00, '2023-02-15'),
+(5, 5, 700.00, '2023-02-20'),
+(6, 6, 350.00, '2023-02-25'),
+(7, 7, 400.00, '2023-03-01'),
+(8, 8, 750.00, '2023-03-05'),
+(9, 9, 650.00, '2023-03-10'),
+(10, 10, 800.00, '2023-03-15');*/
+
+--select * from Teacher;
