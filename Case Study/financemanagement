@@ -1,0 +1,62 @@
+--TABLES CREATION
+/*CREATE TABLE Users (
+    user_id INT PRIMARY KEY,
+    username VARCHAR(50),
+    password VARCHAR(50),
+    email VARCHAR(100)
+);*/
+
+/*CREATE TABLE ExpenseCategories (
+    category_id INT PRIMARY KEY,
+    category_name VARCHAR(50)
+);*/
+
+/*CREATE TABLE Expenses (
+    expense_id INT PRIMARY KEY,
+    user_id INT,
+    amount DECIMAL(10,2),
+    category_id INT,
+    date DATE,
+    description TEXT,
+    FOREIGN KEY (user_id) REFERENCES Users(user_id),
+    FOREIGN KEY (category_id) REFERENCES ExpenseCategories(category_id)
+);*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+--DATA INSERTION
+/*INSERT INTO Users (user_id, username, password, email) VALUES
+(1, 'JohnDoe', 'password123', 'john@example.com'),
+(2, 'JaneSmith', 'securepass', 'jane@example.com'),
+(3, 'AliceBrown', 'alicepass', 'alice@example.com'),
+(4, 'BobDavis', 'bobpass', 'bob@example.com'),
+(5, 'CharlieMiller', 'charliepass', 'charlie@example.com'),
+(6, 'DavidClark', 'davidpass', 'david@example.com'),
+(7, 'EveJohnson', 'evepass', 'eve@example.com'),
+(8, 'FrankWhite', 'frankpass', 'frank@example.com'),
+(9, 'GraceLee', 'gracepass', 'grace@example.com'),
+(10, 'HannahMoore', 'hannahpass', 'hannah@example.com');*/
+
+/*INSERT INTO ExpenseCategories (category_id, category_name) VALUES
+(1, 'Food'),
+(2, 'Transport'),
+(3, 'Utilities'),
+(4, 'Entertainment'),
+(5, 'Healthcare'),
+(6, 'Education'),
+(7, 'Shopping'),
+(8, 'Rent'),
+(9, 'Travel'),
+(10, 'Miscellaneous');*/
+
+/*INSERT INTO Expenses (expense_id, user_id, amount, category_id, date, description) VALUES
+(1, 1, 50.00, 1, '2023-03-01', 'Groceries'),
+(2, 2, 15.00, 2, '2023-03-02', 'Bus fare'),
+(3, 3, 100.00, 3, '2023-03-03', 'Electricity bill'),
+(4, 4, 200.00, 4, '2023-03-04', 'Concert ticket'),
+(5, 5, 75.00, 5, '2023-03-05', 'Doctor consultation'),
+(6, 6, 300.00, 6, '2023-03-06', 'Tuition fee'),
+(7, 7, 120.00, 7, '2023-03-07', 'Clothes shopping'),
+(8, 8, 800.00, 8, '2023-03-08', 'Monthly rent'),
+(9, 9, 500.00, 9, '2023-03-09', 'Vacation trip'),
+(10, 10, 60.00, 10, '2023-03-10', 'Miscellaneous expenses');*/
