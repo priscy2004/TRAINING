@@ -63,9 +63,8 @@ WHERE (SELECT COUNT(*) FROM Courses) = (
 
 /*SELECT t.first_name, t.last_name
 FROM Teacher t
-WHERE NOT EXISTS (
-    SELECT 1 FROM Courses c WHERE c.teacher_id = t.teacher_id
-);*/
+WHERE t.teacher_id NOT IN (SELECT c.teacher_id FROM Courses c);*/
+
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
 
