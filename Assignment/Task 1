@@ -1,5 +1,5 @@
 --CREATE DATABASE SISDB;
-
+--USE SISDB;
 --Tables creation -> Students, Courses, Enrollments, Teacher, Payments.
 --Data insertion
 
